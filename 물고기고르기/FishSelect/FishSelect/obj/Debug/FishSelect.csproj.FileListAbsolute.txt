@@ -1,0 +1,11 @@
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\bin\Debug\FishSelect.exe.config
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\bin\Debug\FishSelect.exe
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\bin\Debug\FishSelect.pdb
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.csprojAssemblyReference.cache
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.Form1.resources
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.Properties.Resources.resources
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.csproj.GenerateResource.cache
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.csproj.CoreCompileInputs.cache
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.exe
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.pdb
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.Fish_DataAdd.resources
