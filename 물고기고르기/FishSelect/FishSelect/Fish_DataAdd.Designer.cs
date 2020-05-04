@@ -31,7 +31,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cmb_FishClass = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_FishName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.txt_WaterTH = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txt_AddEx = new System.Windows.Forms.TextBox();
+            this.cmb_FishClass = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -103,44 +103,27 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.cmb_FishClass, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cmb_FishClass, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_FishName, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt_FishNo, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txt_FishNo, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(565, 56);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // cmb_FishClass
-            // 
-            this.cmb_FishClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmb_FishClass.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.cmb_FishClass.FormattingEnabled = true;
-            this.cmb_FishClass.Items.AddRange(new object[] {
-            "난태생/난생송사리과",
-            "카라신과",
-            "시클리드과",
-            "잉어과",
-            "메기과",
-            "아나바스과",
-            "난두스기수어과"});
-            this.cmb_FishClass.Location = new System.Drawing.Point(108, 31);
-            this.cmb_FishClass.Name = "cmb_FishClass";
-            this.cmb_FishClass.Size = new System.Drawing.Size(171, 21);
-            this.cmb_FishClass.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 10F);
-            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Location = new System.Drawing.Point(3, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 14);
             this.label1.TabIndex = 0;
@@ -160,7 +143,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("굴림", 10F);
-            this.label10.Location = new System.Drawing.Point(3, 35);
+            this.label10.Location = new System.Drawing.Point(285, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 14);
             this.label10.TabIndex = 2;
@@ -171,7 +154,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("굴림", 10F);
-            this.label11.Location = new System.Drawing.Point(285, 35);
+            this.label11.Location = new System.Drawing.Point(3, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 14);
             this.label11.TabIndex = 2;
@@ -181,9 +164,9 @@
             // 
             this.txt_FishNo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_FishNo.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
-            this.txt_FishNo.Location = new System.Drawing.Point(390, 31);
+            this.txt_FishNo.Location = new System.Drawing.Point(108, 31);
             this.txt_FishNo.Name = "txt_FishNo";
-            this.txt_FishNo.Size = new System.Drawing.Size(172, 23);
+            this.txt_FishNo.Size = new System.Drawing.Size(171, 23);
             this.txt_FishNo.TabIndex = 3;
             // 
             // btn_PictureLoad
@@ -494,6 +477,24 @@
             this.txt_AddEx.Size = new System.Drawing.Size(273, 185);
             this.txt_AddEx.TabIndex = 3;
             // 
+            // cmb_FishClass
+            // 
+            this.cmb_FishClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmb_FishClass.Font = new System.Drawing.Font("굴림", 10F, System.Drawing.FontStyle.Bold);
+            this.cmb_FishClass.FormattingEnabled = true;
+            this.cmb_FishClass.Items.AddRange(new object[] {
+            "난태생/난생송사리과",
+            "카라신과",
+            "시클리드과",
+            "잉어과",
+            "메기과",
+            "아나바스과",
+            "난두스기수어과"});
+            this.cmb_FishClass.Location = new System.Drawing.Point(390, 3);
+            this.cmb_FishClass.Name = "cmb_FishClass";
+            this.cmb_FishClass.Size = new System.Drawing.Size(172, 21);
+            this.cmb_FishClass.TabIndex = 4;
+            // 
             // Fish_DataAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -533,7 +534,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmb_FishClass;
         private System.Windows.Forms.TextBox txt_FishNo;
         private System.Windows.Forms.TextBox txt_FishName;
         private System.Windows.Forms.Label label11;
@@ -566,5 +566,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.ComboBox cmb_FishClass;
     }
 }

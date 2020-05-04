@@ -9,3 +9,4 @@ C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelec
 C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.exe
 C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.pdb
 C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.Fish_DataAdd.resources
+C:\Users\yeeso\Documents\GitHub\프로그램 제작\물고기고르기\FishSelect\FishSelect\obj\Debug\FishSelect.csproj.ResolveComReference.cache
