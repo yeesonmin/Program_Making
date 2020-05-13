@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Fish_DataAdd.resx">
       <DependentUpon>Fish_DataAdd.cs</DependentUpon>
     </EmbeddedResource>

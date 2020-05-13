@@ -91,7 +91,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(315, 116);
             this.listBox1.TabIndex = 4;
-            
             // 
             // label2
             // 
@@ -102,7 +101,6 @@
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "물고기과";
-           
             // 
             // button3
             // 
