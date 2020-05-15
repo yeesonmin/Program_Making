@@ -159,7 +159,6 @@
             this.txt_FishNo.Name = "txt_FishNo";
             this.txt_FishNo.Size = new System.Drawing.Size(171, 23);
             this.txt_FishNo.TabIndex = 3;
-            this.txt_FishNo.TextChanged += new System.EventHandler(this.txt_FishNo_TextChanged);
             // 
             // label11
             // 
@@ -343,7 +342,8 @@
             this.cmb_FishFloor.Items.AddRange(new object[] {
             "상류층",
             "중류층",
-            "하류층"});
+            "하류층",
+            "모든층"});
             this.cmb_FishFloor.Location = new System.Drawing.Point(390, 34);
             this.cmb_FishFloor.Name = "cmb_FishFloor";
             this.cmb_FishFloor.Size = new System.Drawing.Size(172, 24);
@@ -464,7 +464,9 @@
             this.cmb_WaterQuality.FormattingEnabled = true;
             this.cmb_WaterQuality.Items.AddRange(new object[] {
             "약산성",
+            "약산성~중성",
             "중성",
+            "중성 ~ 약알칼리성",
             "약알칼리성"});
             this.cmb_WaterQuality.Location = new System.Drawing.Point(108, 3);
             this.cmb_WaterQuality.Name = "cmb_WaterQuality";
@@ -567,6 +569,7 @@
             this.Name = "Fish_DataAdd";
             this.RightToLeftLayout = true;
             this.Text = "물고기 데이터 추가";
+            this.Load += new System.EventHandler(this.Fish_DataAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

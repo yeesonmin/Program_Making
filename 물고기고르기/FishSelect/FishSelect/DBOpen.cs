@@ -10,18 +10,33 @@ using System.Windows.Forms;
 
 namespace FishSelect
 {
-    public class SaveDB : Fish_DataAdd
+    public class DBOpen
     {
-
         bool saveCheck;
-        string existFile;
-        Excel.Application excelapp;
-        Excel._Workbook excelworkbook;
-        Excel._Worksheet excelsheet;
-        Excel.Range oRng;
-        
-        
+        public string existFile;
+        public Excel.Application excelapp;
+        public Excel._Workbook excelworkbook;
+        public Excel._Worksheet excelsheet;
 
+
+        public void DBFileOpen(Form1 fm1)
+        {
+            SaveCheck();
+
+            //db 파일 없으면 새로 만듬.
+            if (!saveCheck)
+            {
+                CreateDBFile();
+            }
+            else
+            {
+                Open();
+            }
+
+            //excel값 전달
+            fm1.existFile = existFile;
+
+        }
         void SaveCheck()
         {
             //db경로
@@ -36,22 +51,7 @@ namespace FishSelect
 
         }
 
-        public void SaveDBFile(Fish_DataAdd FD)
-        {
-            SaveCheck();
-
-            //db 파일 없으면 새로 만듬.
-            if (!saveCheck)
-            {
-                CreateDBFile(FD);
-            }
-            else
-            {
-                AddDB(FD);
-            }
-        }
-
-        void CreateDBFile(Fish_DataAdd FD)
+        void CreateDBFile()
         {
             try
             {
@@ -84,39 +84,6 @@ namespace FishSelect
                 excelsheet.get_Range("A1", "M1").VerticalAlignment =
                 Excel.XlVAlign.xlVAlignCenter;
 
-                // Create Data
-                int excelRowsCount = excelsheet.Rows.Row;
-
-                excelsheet.Cells[1 + excelRowsCount, 1] = FD.txt_FishNo.Text;
-                excelsheet.Cells[1 + excelRowsCount, 2] = FD.cmb_FishClass.Text;
-                excelsheet.Cells[1 + excelRowsCount, 3] = FD.txt_FishName.Text;
-                excelsheet.Cells[1 + excelRowsCount, 4] = FD.txt_FishSize.Text;
-                excelsheet.Cells[1 + excelRowsCount, 5] = FD.cmb_FishEat.Text;
-                excelsheet.Cells[1 + excelRowsCount, 6] = FD.cmb_FishCharacter.Text;
-                excelsheet.Cells[1 + excelRowsCount, 7] = FD.cmb_FishFloor.Text;
-                excelsheet.Cells[1 + excelRowsCount, 8] = FD.cmb_WaterQuality.Text;
-                excelsheet.Cells[1 + excelRowsCount, 9] = FD.cmb_WaterTH.Text;
-                excelsheet.Cells[1 + excelRowsCount, 10] = FD.cmb_BreedDiff.Text;
-                excelsheet.Cells[1 + excelRowsCount, 11] = FD.cmb_BreedingDiff.Text;
-                excelsheet.Cells[1 + excelRowsCount, 12] = FD.cmb_JoinDiff.Text;
-                excelsheet.Cells[1 + excelRowsCount, 13] = FD.txt_AddEx.Text;
-
-
-
-
-                //AutoFit columns A:D.
-                oRng = excelsheet.get_Range("A1", "M1");
-                oRng.EntireColumn.AutoFit();
-
-
-                //Make sure Excel is visible and give the user control
-                //of Microsoft Excel's lifetime.
-                excelapp.Visible = true;
-                excelapp.UserControl = true;
-
-                excelworkbook.SaveAs(existFile, Excel.XlFileFormat.xlWorkbookDefault); // 엑셀 파일 저장
-                excelworkbook.Close(true);
-                excelapp.Quit();
 
 
             }
@@ -139,9 +106,9 @@ namespace FishSelect
 
         }
 
-        void AddDB(Fish_DataAdd FD)
+        void Open()
         {
-            
+
             try
             {
                 excelapp = new Excel.Application();
@@ -149,38 +116,6 @@ namespace FishSelect
                 excelworkbook = excelapp.Workbooks.Open(Filename: @existFile);
                 excelsheet = excelworkbook.Worksheets.Item[1];
 
-                // Create Data
-                int excelRowsCount = excelsheet.UsedRange.Rows.Count;
-
-
-                excelsheet.Cells[1 + excelRowsCount, 1] = FD.txt_FishNo.Text;
-                excelsheet.Cells[1 + excelRowsCount, 2] = FD.cmb_FishClass.Text;
-                excelsheet.Cells[1 + excelRowsCount, 3] = FD.txt_FishName.Text;
-                excelsheet.Cells[1 + excelRowsCount, 4] = FD.txt_FishSize.Text;
-                excelsheet.Cells[1 + excelRowsCount, 5] = FD.cmb_FishEat.Text;
-                excelsheet.Cells[1 + excelRowsCount, 6] = FD.cmb_FishCharacter.Text;
-                excelsheet.Cells[1 + excelRowsCount, 7] = FD.cmb_FishFloor.Text;
-                excelsheet.Cells[1 + excelRowsCount, 8] = FD.cmb_WaterQuality.Text;
-                excelsheet.Cells[1 + excelRowsCount, 9] = FD.cmb_WaterTH.Text;
-                excelsheet.Cells[1 + excelRowsCount, 10] = FD.cmb_BreedDiff.Text;
-                excelsheet.Cells[1 + excelRowsCount, 11] = FD.cmb_BreedingDiff.Text;
-                excelsheet.Cells[1 + excelRowsCount, 12] = FD.cmb_JoinDiff.Text;
-                excelsheet.Cells[1 + excelRowsCount, 13] = FD.txt_AddEx.Text;
-
-                //AutoFit columns A:D.
-                oRng = excelsheet.get_Range("A1", "M1");
-                oRng.EntireColumn.AutoFit();
-
-
-                //Make sure Excel is visible and give the user control
-                //of Microsoft Excel's lifetime.
-                excelapp.Visible = true;
-                excelapp.UserControl = true;
-
-
-                excelworkbook.Save(); // 엑셀 파일 저장
-                excelworkbook.Close(true);
-                excelapp.Quit();
             }
             catch (Exception theException)
             {
@@ -200,10 +135,6 @@ namespace FishSelect
             }
 
         }
-        /// <summary> 
-        /// 액셀 객체 해제 메소드 
-        /// </summary>
-        /// <param name="obj"></param>
         static void ReleaseObject(object obj)
         {
             try
@@ -224,6 +155,5 @@ namespace FishSelect
                 // 가비지 수집 
             }
         }
-
     }
 }

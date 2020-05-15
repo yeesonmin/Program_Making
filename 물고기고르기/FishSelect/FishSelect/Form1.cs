@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+using System.IO;
 
 namespace FishSelect
 {
     public partial class Form1 : Form
     {
         public bool open = false;
+        public string existFile;//파일 주소 저장
+
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +25,9 @@ namespace FishSelect
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            DBOpen dbopen = new DBOpen();
+            dbopen.DBFileOpen(this);
+            
         }
 
         
@@ -34,6 +41,12 @@ namespace FishSelect
             }
            open = true;
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DBClose dpclose = new DBClose();
+            dpclose.DBFileCloes();
         }
     }
 }
