@@ -22,3 +22,10 @@
   * 물고기고르기 코드 추가
   * 엑셀로 데이터 연동 작업
     * 엑셀 저장 기능 추가 완료
+    
+* 20.05.15(금)
+  * 물고기고르기 코드 추가
+  * 엑셀로 데이터 연동 작업
+    * 엑셀 코드 클래스 작업
+    * 열려있는 폼 정보 얻기 (https://ilbbang-programming.tistory.com/9)
+    * 실행 중인 엑셀 정보 얻기 (https://docs.microsoft.com/ko-kr/previous-versions/office/troubleshoot/office-developer/use-visual-c-automate-run-program-instance)
