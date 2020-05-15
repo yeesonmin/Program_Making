@@ -29,3 +29,4 @@
     * 엑셀 코드 클래스 작업
     * 열려있는 폼 정보 얻기 (https://ilbbang-programming.tistory.com/9)
     * 실행 중인 엑셀 정보 얻기 (https://docs.microsoft.com/ko-kr/previous-versions/office/troubleshoot/office-developer/use-visual-c-automate-run-program-instance)
+    * 엑셀 중복데이터 확인코드 진행중
